@@ -8,7 +8,7 @@
 	Modified for Particle Photon by Paul Kourany (peekay123), Oct 24, 2105
 */
 
-#include "FPS_GT511C3.h";
+#include "FPS_GT511C3.h"
 
 
 // returns the 12 bytes of the generated command packet
