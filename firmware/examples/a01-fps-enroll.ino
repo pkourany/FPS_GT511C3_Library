@@ -2,7 +2,7 @@
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
 
 /* 
-	a02-fps-enroll.ino - Library example for controlling the GT-511C3 Finger Print Scanner (FPS)
+	a01-fps-enroll.ino - Library example for controlling the GT-511C3 Finger Print Scanner (FPS)
 	Created by Josh Hawley, July 23rd 2013
 	Licensed for non-commercial use, must include this license message
 	basically, Feel free to hack away at it, but just give me credit for my work =)
@@ -19,6 +19,7 @@
 
 
 // This sketch needs a serial connection to know which ID's you are setting.
+// Power up the Photon, connect to your serial client (I use Putty), wait for the photon to breath cyan
 // Must use the enrol sketch first.
 
 
