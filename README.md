@@ -25,7 +25,7 @@ Here is how the wires attach to the Photon
 
 ![](photonfps.jpg)
 
-Here is what the recipe on IFTTT.com looks like when it is fully made
+Here is what the recipe on http://ifttt.com looks like when it is fully made
 
 ![](ifttt2.png)
 
