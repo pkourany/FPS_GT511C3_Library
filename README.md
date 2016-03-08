@@ -23,6 +23,15 @@ Here is what the connections to the Fingerprint Scanner look like
 
 Here is how the wires attach to the Photon
 
+Green to Rx
+
+Yellow to TX
+
+Black to GND
+
+Red to Vin
+
+
 ![](photonfps.jpg)
 
 Here is what the recipe on http://ifttt.com looks like when it is fully made
