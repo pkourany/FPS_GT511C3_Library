@@ -17,13 +17,16 @@ Repository Contents
 * Updated by Jeremy Ellis Mar 8, 2016
 * 
 Here is what the connections to the Fingerprint Scanner look like
+
 ![](fps.jpg)
 
 
 Here is how the wires attach to the Photon
+
 ![](photonfps.jpg)
 
 Here is what the recipe on IFTTT.com looks like when it is fully made
+
 ![](ifttt2.png)
 
 
