@@ -188,7 +188,7 @@ void Enroll()
 
 void loop()
 {
-   Serial.println("Waiting 10 seconds");
-   delay(10000);
+   Serial.println("Waiting 3 seconds");
+   delay(3000);
    Enroll();
 }
