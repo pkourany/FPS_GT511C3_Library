@@ -12,7 +12,22 @@ Repository Contents
 -------------------
 * **/FPS_GT511C3** - Arduino Library to interface with the sensor.
 
-* Modified for Particle Photon by Paul Kourany (peekay123), Oct 24, 2105
+* Modified for Particle Photon by Paul Kourany (peekay123), Oct 24, 2015
+* 
+* Updated by Jeremy Ellis Mar 8, 2016
+* 
+
+![](fps.jpg)
+
+
+
+![](photonfps.jpg)
+
+
+![](ifttt.png)
+
+
+
 
 
 License Information
