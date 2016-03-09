@@ -188,7 +188,8 @@ void Enroll()
 
 void loop()
 {
-   Serial.println("Waiting 3 seconds");
-   delay(3000);
+   Serial.println("");
+   Serial.println("Enter another finger.");
+   delay(100);
    Enroll();
 }
