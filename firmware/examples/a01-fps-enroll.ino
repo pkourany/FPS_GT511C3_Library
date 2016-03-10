@@ -49,6 +49,7 @@ FPS_GT511C3 fps;
 
 void setup()
 {
+	delay(5000);    // time to activate the serial connection 
 	Serial.begin(9600);
 	delay(100);
 	fps.Open();
