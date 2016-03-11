@@ -84,5 +84,35 @@ void loop(){
       Serial.println("Deleted that entry");  
     } else {Serial.println("Nothing deleted");  }
   }    
+  
+  
+  if (toDelete == 200){
+     	fps.SetLED(true);
+     	Serial.println("LED true");
+  }
+  
+    
+  if (toDelete == 201){
+     	fps.SetLED(false);
+     	Serial.println("LED false");	
+  }
+  
+    
+  if (toDelete == 999){
+     if	(fps.DeleteAll()){
+     	Serial.println("deleted all scans");
+     }   else {Serial.println("Did not delete all scans");}
+  }
+  
+  
+   if (toDelete == 333){
+     if	(fps.IsPressFinger()){
+     	Serial.println("Someones pushing the scaner down");
+     }   else {Serial.println("No infomation about pushing the scanner");}
+  }
+  
+   
+  
+
 
 } 
