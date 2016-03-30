@@ -1,7 +1,7 @@
 {
 	"name": "FPS_GT511C3",
 	"author": "Pkourany and Jeremy Ellis",
-	"version": "0.0.8",
+	"version": "0.1.0",
 	"license": "Wil Wheaton's Law",
 	"description": "Fingerprint Scanner Library"
 }
