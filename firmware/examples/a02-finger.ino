@@ -76,28 +76,26 @@ void loop()
 		{
 			Serial.print("Verified ID:");
 			Serial.println(id);
-			
-		//	if (id==0){nameString = "Tom's Right Index Finger";}
-		//	if (id==1){nameString = "Mary's Right Index Finger";}
-		//	if (id==2){nameString = "Fred G's Right Index Finger";}
-			
-			
-			
+	
 		//	Particle.publish("my-FPS-verified334", nameString, 60, PUBLIC); // use public when testing then use Private
 			Particle.publish("my-FPS-verified334", String(id), 60, PRIVATE); 
 			digitalWrite(D7, HIGH); // slow flash if good
 		    delay(1000);
 			digitalWrite(D7, LOW);
-			delay(1000);			
-			digitalWrite(D7, HIGH);
-		    delay(1000);
-			digitalWrite(D7, LOW);
-			delay(1000);
+	
 		}
 		else
 		{
 			Serial.println("Finger not found");
 			digitalWrite(D7, HIGH);  // fast flash if bad
+		    delay(100);
+			digitalWrite(D7, LOW);
+			delay(100);			
+			digitalWrite(D7, HIGH);
+		    delay(100);
+			digitalWrite(D7, LOW);
+			delay(100);			
+			digitalWrite(D7, HIGH);
 		    delay(100);
 			digitalWrite(D7, LOW);
 			delay(100);			
