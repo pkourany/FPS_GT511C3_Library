@@ -112,7 +112,14 @@ void loop(){
   }
   
    
-  
+ 	if (fps.IsPressFinger())
+	{
+     	     Serial.println("Someones pushing the scaner down");
+	     	fps.SetLED(false);
+	     	DELAY(2000);
+	     	fps.SetLED(true);
+		
+	} 
 
 
 } 
