@@ -1,3 +1,6 @@
+// This #include statement was automatically added by the Particle IDE.
+#include "FPS_GT511C3.h"
+
 
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
 /* 
@@ -12,7 +15,7 @@
 	updated by Jeremy Ellis, Twitter @rocksetta,  Mar 8th, 2016 
 */
 
-#include "FPS_GT511C3/FPS_GT511C3.h"
+#include "FPS_GT511C3.h"
 
 
 
@@ -80,8 +83,8 @@ void loop()
 			
 			
 			
-			Particle.publish("my-FPS-verified334", nameString, 60, PUBLIC); // use public when testing then use Private
-		//	Particle.publish("my-FPS-verified334", String(id), 60, PRIVATE); 
+		//	Particle.publish("my-FPS-verified334", nameString, 60, PUBLIC); // use public when testing then use Private
+			Particle.publish("my-FPS-verified334", String(id), 60, PRIVATE); 
 			digitalWrite(D7, HIGH); // slow flash if good
 		    delay(1000);
 			digitalWrite(D7, LOW);
