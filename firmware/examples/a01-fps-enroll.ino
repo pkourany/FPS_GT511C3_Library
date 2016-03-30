@@ -54,7 +54,7 @@ void setup()
 	delay(100);
 	fps.Open();
 	fps.SetLED(true);
-    pinMode(D7, OUTPUT);
+        pinMode(D7, OUTPUT);
 	Enroll();
 }
 
@@ -87,10 +87,10 @@ void Enroll()
 		fps.Enroll1(); 
 		while(fps.IsPressFinger() == true) delay(100);
 		
-	    digitalWrite(D7, HIGH);
+	        digitalWrite(D7, HIGH);
 		Serial.println("Press same finger again");
 		while(fps.IsPressFinger() == false) delay(100);
-	    digitalWrite(D7, LOW);
+	        digitalWrite(D7, LOW);
 		bret = fps.CaptureFinger(true);
 		if (bret != false)
 		{
@@ -98,11 +98,11 @@ void Enroll()
 			fps.Enroll2();
 			while(fps.IsPressFinger() == true) delay(100);
 			
-        	digitalWrite(D7, HIGH);
+        	        digitalWrite(D7, HIGH);
 			Serial.println("Press same finger yet again");
 			while(fps.IsPressFinger() == false) delay(100);
 			
-	        digitalWrite(D7, LOW);
+	               digitalWrite(D7, LOW);
 			bret = fps.CaptureFinger(true);
 			if (bret != false)
 			{
@@ -112,7 +112,8 @@ void Enroll()
 				{
 					Serial.println("Enrolling Successfull");
 					
-					
+			
+	                RGB.brightness(1);    // 1=very low light, 255 = max		
 	                digitalWrite(D7, HIGH);
 	                delay(1000);
 	                digitalWrite(D7, LOW);
@@ -123,66 +124,66 @@ void Enroll()
 	                delay(1000);
 	                digitalWrite(D7, HIGH);
 	                delay(1000);
-	                digitalWrite(D7, LOW);
+	                RGB.brightness(255);    // 1=very low light, 255 = max
 				}
 				else
 				{
 					Serial.print("Enrolling Failed with error code:");
 					Serial.println(iret);
 					digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);	                
-	                delay(200);					
+	                delay(50);					
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
 				}
 			}
 			else Serial.println("Failed to capture third finger");	
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
 				            
 		}
 		else Serial.println("Failed to capture second finger");	
 
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
 	}
 	else Serial.println("Failed to capture first finger");	
 
 
 	                digitalWrite(D7, HIGH);
-	                delay(200);
+	                delay(50);
 	                digitalWrite(D7, LOW);
 }
 
