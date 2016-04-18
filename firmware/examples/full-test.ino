@@ -1,6 +1,3 @@
-// This #include statement was automatically added by the Particle IDE.
-#include "FPS_GT511C3/FPS_GT511C3.h"
-
 
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
 /* 
