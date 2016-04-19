@@ -1,5 +1,9 @@
 
 
+// This #include statement should be automatically added by the Particle IDE.
+// #include "FPS_GT511C3/FPS_GT511C3.h"
+
+
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
 /* 
 	a02-finger.ino - Library example for controlling the GT-511C3 Finger Print Scanner (FPS)
