@@ -1,6 +1,5 @@
 
 
-
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
 /* 
 	a02-finger.ino - Library example for controlling the GT-511C3 Finger Print Scanner (FPS)
@@ -29,6 +28,13 @@
 
 //Hardware setup for the photon
 /*
+
+//Push button connects D6 to power.
+// tap to relight FPS
+// hold for 4 seconds to enter each new student
+
+
+
 My cable is green, yellow, black, red but some cables only have the first wire identified.
 
 Pin   Wire Color       Photon Connection
@@ -45,7 +51,7 @@ Pin   Wire Color       Photon Connection
 
 
 
-String nameString = "";
+//String nameString = "";
 
 
 
@@ -86,7 +92,10 @@ void Enroll()
 	digitalWrite(D7, HIGH);
 	Serial.print("Press finger to Enroll #");
 	Serial.println(enrollid);
-	while(fps.IsPressFinger() == false) delay(100);
+	while(fps.IsPressFinger() == false) {
+	   delay(100);
+	  // if (digitalRead(D6) == LOW){break;}  // get out of loop if button off
+	   }
 	digitalWrite(D7, LOW);
 	bool bret = fps.CaptureFinger(true);
 	int iret = 0;
@@ -216,17 +225,15 @@ void loop()
         fps.SetLED(true);   // if FPS LED was off turn it back on
 	     myLoops = 0;       // restart the delay
 	     myEnrollLoops +=1;
-	     //delay(300);
          if (myEnrollLoops >= 30){	  // still pressing button call enroll   
-            Enroll();
-        }
-        else {myEnrollLoops = 0;} // finished pressing button reset enroll loop
+             Enroll();
+         }
     }
+ 
     
-
     
     else {  //D6 not connected to power 
-
+      myEnrollLoops = 0;          // reset loop counter for button
 	// Identify fingerprint test
 	if (fps.IsPressFinger())
 	{
