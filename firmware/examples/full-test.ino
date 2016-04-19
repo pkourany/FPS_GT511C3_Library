@@ -1,7 +1,5 @@
-
-
 // This #include statement should be automatically added by the Particle IDE.
-// #include "FPS_GT511C3/FPS_GT511C3.h"
+//#include "FPS_GT511C3/FPS_GT511C3.h"
 
 
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
@@ -229,7 +227,7 @@ void loop()
         fps.SetLED(true);   // if FPS LED was off turn it back on
 	     myLoops = 0;       // restart the delay
 	     myEnrollLoops +=1;
-         if (myEnrollLoops >= 30){	  // still pressing button call enroll   
+         if (myEnrollLoops >= 10){	  // still pressing button call enroll   
              Enroll();
          }
     }
