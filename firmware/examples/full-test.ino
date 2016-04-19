@@ -1,4 +1,6 @@
 
+
+
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
 /* 
 	a02-finger.ino - Library example for controlling the GT-511C3 Finger Print Scanner (FPS)
@@ -13,7 +15,7 @@
 */
 
 
-#include "FPS_GT511C3/FPS_GT511C3.h"
+
 
 
 // Works fine without serial connection or the IFTTT setup.
@@ -197,6 +199,7 @@ void Enroll()
 
 
 int myLoops = 0;
+int myEnrollLoops = 0;
 
 
 
@@ -212,10 +215,12 @@ void loop()
     if (digitalRead(D6) == HIGH){
         fps.SetLED(true);   // if FPS LED was off turn it back on
 	     myLoops = 0;       // restart the delay
-	     delay(300);
-         if (digitalRead(D6) == HIGH){	  // still pressing button call enroll   
+	     myEnrollLoops +=1;
+	     //delay(300);
+         if (myEnrollLoops >= 30){	  // still pressing button call enroll   
             Enroll();
         }
+        else {myEnrollLoops = 0;} // finished pressing button reset enroll loop
     }
     
 
@@ -238,8 +243,10 @@ void loop()
 		//	Particle.publish("my-FPS-verified334", nameString, 60, PUBLIC); // use public when testing then use Private
 			Particle.publish("my-FPS-verified334", String(id), 60, PRIVATE); 
 			digitalWrite(D7, HIGH); // slow flash if good
+			fps.SetLED(false);      // flash the FPS if good 
 		    delay(1000);
 			digitalWrite(D7, LOW);
+			fps.SetLED(true); 
 	
 		}
 		else
