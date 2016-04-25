@@ -24,7 +24,7 @@ A 3d printed case for the pHoton and fingerprint scanner is at [https://github.c
 ![](fps-case.jpg)
 Here is what the connections to the Fingerprint Scanner look like
 
-![](fps.jpg)
+![](fps-case.jpg)
 
 
 Here is how the wires attach to the Photon
