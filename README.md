@@ -47,6 +47,12 @@ Red to Vin
 
 ![](photonfps.jpg)
 
+
+Here  is a copy of the Google Docs spreadsheet with code to identify attendance. Note: contains three sheets, first for the raw data, 2nd for attendance, third for storing the raw data.
+[my-FPS-verified334.xlsx](my-FPS-verified334.xlsx)
+
+
+
 Here is what the recipe on http://ifttt.com looks like when it is fully made
 
 ![](ifttt2.png)
