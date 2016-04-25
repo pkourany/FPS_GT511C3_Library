@@ -58,6 +58,9 @@ Here is what the recipe on http://ifttt.com looks like when it is fully made
 ![](ifttt2.png)
 
 
+Updates by Jeremy Ellis
+Twitter @rocksetta
+Use at your risk
 
 
 
