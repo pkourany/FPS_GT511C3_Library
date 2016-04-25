@@ -1,5 +1,5 @@
-// This #include statement was automatically added by the Particle IDE.
-#include "FPS_GT511C3/FPS_GT511C3.h"
+// This #include statement should be automatically added by the Particle IDE.
+//#include "FPS_GT511C3/FPS_GT511C3.h"
 
 
 //Proper github at https://github.com/pkourany/FPS_GT511C3_Library
@@ -30,6 +30,13 @@
 
 //Hardware setup for the photon
 /*
+
+//Push button connects D6 to power.
+// tap to relight FPS
+// hold for 4 seconds to enter each new student
+
+
+
 My cable is green, yellow, black, red but some cables only have the first wire identified.
 
 Pin   Wire Color       Photon Connection
@@ -46,7 +53,7 @@ Pin   Wire Color       Photon Connection
 
 
 
-String nameString = "";
+//String nameString = "";
 
 
 
@@ -87,7 +94,10 @@ void Enroll()
 	digitalWrite(D7, HIGH);
 	Serial.print("Press finger to Enroll #");
 	Serial.println(enrollid);
-	while(fps.IsPressFinger() == false) delay(100);
+	while(fps.IsPressFinger() == false) {
+	   delay(100);
+	  // if (digitalRead(D6) == LOW){break;}  // get out of loop if button off
+	   }
 	digitalWrite(D7, LOW);
 	bool bret = fps.CaptureFinger(true);
 	int iret = 0;
@@ -199,33 +209,38 @@ void Enroll()
 
 
 
-
-
-
-
-
-
-
-
-
-
+int myLoops = 0;
+int myEnrollLoops = 0;
 
 
 
 void loop()
 {
     
-    if (digitalRead(D6) == HIGH){
-         Enroll();
-         delay(100);
+    myLoops +=1;
+    
+    if (myLoops >=3000){     // 500 = about 1 minute
+	     	fps.SetLED(false);  // turn off FPS led after a delay
     }
     
+    if (digitalRead(D6) == HIGH){
+        fps.SetLED(true);   // if FPS LED was off turn it back on
+	     myLoops = 0;       // restart the delay
+	     myEnrollLoops +=1;
+         if (myEnrollLoops >= 10){	  // still pressing button call enroll   
+             Enroll();
+         }
+    }
+ 
+    
+    
     else {  //D6 not connected to power 
-
+      myEnrollLoops = 0;          // reset loop counter for button
 	// Identify fingerprint test
 	if (fps.IsPressFinger())
 	{
-	    
+	    fps.SetLED(true);   // if FPS LED was off turn it back on
+	    myLoops = 0;       // restart the delay
 	    RGB.brightness(1);    // shows it is doing something
 		fps.CaptureFinger(false);
 		int id = fps.Identify1_N();
@@ -237,8 +252,10 @@ void loop()
 		//	Particle.publish("my-FPS-verified334", nameString, 60, PUBLIC); // use public when testing then use Private
 			Particle.publish("my-FPS-verified334", String(id), 60, PRIVATE); 
 			digitalWrite(D7, HIGH); // slow flash if good
+			fps.SetLED(false);      // flash the FPS if good 
 		    delay(1000);
 			digitalWrite(D7, LOW);
+			fps.SetLED(true); 
 	
 		}
 		else
