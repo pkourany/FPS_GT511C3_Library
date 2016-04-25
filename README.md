@@ -16,6 +16,12 @@ Repository Contents
 * 
 * Updated by Jeremy Ellis Mar 8, 2016
 * 
+* 
+
+
+A 3d printed case for the pHoton and fingerprint scanner is at [https://github.com/hpssjellis/my-3D-printing-stl/tree/master/particle-photon](https://github.com/hpssjellis/my-3D-printing-stl/tree/master/particle-photon)
+
+
 Here is what the connections to the Fingerprint Scanner look like
 
 ![](fps.jpg)
