@@ -11,7 +11,7 @@
 #ifndef FPS_GT511C3_h
 #define FPS_GT511C3_h
 
-#include "application.h"
+#include "Particle.h"
 
 typedef int16_t	word;
 

@@ -12,7 +12,56 @@ Repository Contents
 -------------------
 * **/FPS_GT511C3** - Arduino Library to interface with the sensor.
 
-* Modified for Particle Photon by Paul Kourany (peekay123), Oct 24, 2105
+* Modified for Particle Photon by Paul Kourany (peekay123), Oct 24, 2015
+* 
+* Updated by Jeremy Ellis Mar 8, 2016
+* 
+* 
+
+
+A 3d printed case for the pHoton and fingerprint scanner is at [https://github.com/hpssjellis/my-3D-printing-stl/tree/master/particle-photon](https://github.com/hpssjellis/my-3D-printing-stl/tree/master/particle-photon)
+
+which looks like
+![](breadboard-photon-30.png)
+
+
+
+
+
+
+Here is what the connections to the Fingerprint Scanner look like
+
+![](fps-case.jpg)
+
+
+Here is how the wires attach to the Photon
+
+Green to Rx
+
+Yellow to TX
+
+Black to GND
+
+Red to Vin
+
+
+![](photonfps.jpg)
+
+
+Here  is a copy of the Google Docs spreadsheet with code to identify attendance. Note: contains three sheets, first for the raw data, 2nd for attendance, third for storing the raw data.
+[my-FPS-verified334.xlsx](my-FPS-verified334.xlsx)
+
+
+
+Here is what the recipe on http://ifttt.com looks like when it is fully made
+
+![](ifttt2.png)
+
+
+Updates by Jeremy Ellis
+Twitter @rocksetta
+Use at your risk
+
 
 
 License Information
